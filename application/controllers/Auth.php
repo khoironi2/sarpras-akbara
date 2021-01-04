@@ -37,16 +37,16 @@ class Auth extends CI_Controller
 
             if ($cek_login == FALSE) {
 
-                $this->session->set_flashdata('error_login', 'Email yang Anda masukan tidak terdaftar.');
-                redirect('index.php/auth');
+                $this->session->set_flashdata('error_login', 'NIK yang Anda masukan tidak terdaftar.');
+                redirect('auth');
             } else {
 
                 if (password_verify($pass, $cek_login->password)) {
                     $this->session->set_userdata('id_users', $cek_login->id_users);
-                    $this->session->set_userdata('name', $cek_login->name);
+                    $this->session->set_userdata('nama_lengkap', $cek_login->nama_lengkap);
                     $this->session->set_userdata('nik', $cek_login->nik);
                     $this->session->set_userdata('email', $cek_login->email);
-                    $this->session->set_userdata('level', $cek_login->level);
+                    $this->session->set_userdata('id_jabatan', $cek_login->id_jabatan);
                     date_default_timezone_set("ASIA/JAKARTA");
                     //$email = $this->session->userdata('email');
                     $data = array('time_login_users' => date('Y-m-d H:i:s'));

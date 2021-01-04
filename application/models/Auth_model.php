@@ -30,9 +30,9 @@ class Auth_model extends CI_Model
             return false;
     }
 
-    public function logout($data, $email)
+    public function logout($data, $nik)
     {
-        $this->db->where('email', $email);
+        $this->db->where('nik', $nik);
         $this->db->update('tbl_users', $data);
     }
 }

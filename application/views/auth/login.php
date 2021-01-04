@@ -8,9 +8,9 @@
             <div class="card-body">
                 <p style="font-size: small;" class="login-box-msg">Silahkan login dengan NIK dan Password AKBARA Anda</p>
 
-                <form action="https://adminlte.io/themes/v3/index3.html" method="post">
+                <form action="<?= base_url('auth/loginForm') ?>" method="post">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="NIK">
+                        <input type="text" name="nik" id="nik" class="form-control" placeholder="NIK" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>

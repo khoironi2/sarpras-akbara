@@ -25,7 +25,7 @@ class Admin extends CI_Controller
         // }
         $data = [
             'title' => 'Pengajuan ',
-            'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array()
+            'users' => $this->db->get_where('tbl_users', ['nik' => $this->session->userdata('nik')])->row_array()
         ];
 
         $this->load->view('templates/header', $data);
