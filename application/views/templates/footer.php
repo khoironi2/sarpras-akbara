@@ -51,9 +51,14 @@
     })
 </script>
 
-
+<script>
+    $(function() {
+        bsCustomFileInput.init();
+    });
+</script>
 <!-- jQuery -->
 <!-- DataTables  & Plugins -->
+<script src="<?= base_url('assets/v3'); ?>/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <script src="<?= base_url('assets/v3'); ?>/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url('assets/v3'); ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url('assets/v3'); ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
