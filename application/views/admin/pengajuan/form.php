@@ -26,12 +26,85 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Latar Belakang
+                                Disahkan
                             </h3>
                         </div>
                         <div class="card-body">
-                            <textarea name="latar_belakang_pengajuan" id="summernote1">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="exampleInputEmail1">Dirumuskan</label>
+                                    <div class="select2-purple">
+                                        <select class="select2" name="dirumuskan_pengajuan" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-danger" required style="width: 100%;">
+                                            <?php foreach ($user as $data) : ?>
+                                                <option value="<?= $data->id_users ?>"><?= $data->nama_lengkap ?></option>
+                                            <?php endforeach ?>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputEmail1">Diperiksa</label>
+                                    <div class="select2-purple">
+                                        <select class="select2" name="diperiksa_pengajuan" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-danger" required style="width: 100%;">
+                                            <?php foreach ($user as $data) : ?>
+                                                <option value="<?= $data->id_users ?>"><?= $data->nama_lengkap ?></option>
+                                            <?php endforeach ?>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputEmail1">Ditetapkan</label>
+                                    <div class="select2-purple">
+                                        <select class="select2" name="ditetapkan_pengajuan" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-danger" required style="width: 100%;">
+                                            <?php foreach ($user as $data) : ?>
+                                                <option value="<?= $data->id_users ?>"><?= $data->nama_lengkap ?></option>
+                                            <?php endforeach ?>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleInputEmail1">Dikendalikan</label>
+                                    <div class="select2-purple">
+                                        <select class="select2" name="dikendalikan_pengajuan" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-danger" required style="width: 100%;">
+                                            <?php foreach ($user as $data) : ?>
+                                                <option value="<?= $data->id_users ?>"><?= $data->nama_lengkap ?></option>
+                                            <?php endforeach ?>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="card card-outline card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                Judul
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <input type="text" name="judul_pengajuan" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="card card-outline card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                A. Latar Belakang
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <textarea name="latar_belakang_pengajuan" id="summernote1" required>
+
                          </textarea>
                         </div>
                     </div>
@@ -42,12 +115,12 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Tujuan
+                                B. Tujuan
                             </h3>
                         </div>
                         <div class="card-body">
-                            <textarea name="tujuan_pengajuan" id="summernote2">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                            <textarea name="tujuan_pengajuan" id="summernote2" required>
+
                          </textarea>
                         </div>
                     </div>
@@ -58,12 +131,11 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Manfaat
+                                C. Manfaat
                             </h3>
                         </div>
                         <div class="card-body">
-                            <textarea name="manfaat_pengajuan" id="summernote3">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                            <textarea name="manfaat_pengajuan" id="summernote3" required>
                          </textarea>
                         </div>
                     </div>
@@ -74,12 +146,11 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Jenis Pengajuan
+                                D. Jenis Pengajuan
                             </h3>
                         </div>
                         <div class="card-body">
-                            <textarea name="jenis_pengajuan" id="summernote4">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                            <textarea name="jenis_pengajuan" id="summernote4" required>
                          </textarea>
                         </div>
                     </div>
@@ -90,12 +161,11 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Biaya Anggaran
+                                E. Biaya Anggaran
                             </h3>
                         </div>
                         <div class="card-body">
-                            <textarea name="biaya_pengajuan" id="summernote5">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                            <textarea name="biaya_pengajuan" id="summernote5" required>
                          </textarea>
                         </div>
                     </div>
@@ -106,17 +176,17 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Waktu Pelaksanaan
+                                F. Waktu Pelaksanaan
                             </h3>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="dari">Dari</label>
-                                <input type="datetime-local" class="form-control" id="dari" name="waktu_pengajuan_awal">
+                                <input type="datetime-local" class="form-control" id="dari" name="waktu_pengajuan_awal" required>
                             </div>
                             <div class="form-group">
                                 <label for="sampai">Sampai</label>
-                                <input type="datetime-local" class="form-control" id="sampai" name="waktu_pengajuan_akhir">
+                                <input type="datetime-local" class="form-control" id="sampai" name="waktu_pengajuan_akhir" required>
                             </div>
                         </div>
                     </div>
@@ -128,12 +198,11 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Peserta
+                                G. Peserta
                             </h3>
                         </div>
                         <div class="card-body">
-                            <textarea name="peserta_pengajuan" required id="summernote6">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
+                            <textarea name="peserta_pengajuan" required id="summernote6" required>
                          </textarea>
                         </div>
                     </div>
@@ -145,12 +214,11 @@
                     <div class="card card-outline card-info">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Penutup
+                                H. Penutup
                             </h3>
                         </div>
                         <div class="card-body">
                             <textarea name="penutup_pengajuan" required id="summernote7">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
                          </textarea>
                         </div>
                     </div>

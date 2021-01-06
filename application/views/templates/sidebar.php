@@ -54,6 +54,12 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                            <a href="<?= base_url('pengajuan/pengajuan') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Penngajuan</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="<?= base_url('pengajuan/form') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Form</p>
@@ -63,7 +69,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="<?= base_url('monev/monev') ?>" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
+                        <i class="fas fa-tv"></i>
                         <p>
                             Monev
                             <span class="right badge badge-danger">Coming</span>
@@ -72,7 +78,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="<?= base_url('pelaporan/pelaporan') ?>" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
+                        <i class="fas fa-file-export"></i>
                         <p>
                             Pelaporan
                             <span class="right badge badge-danger">Coming</span>
@@ -81,7 +87,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="<?= base_url('user/account') ?>" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
+                        <i class="fas fa-users"></i>
                         <p>
                             Pengguna
                             <i class="right fas fa-angle-left"></i>

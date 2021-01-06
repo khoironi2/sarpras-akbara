@@ -50,7 +50,7 @@ class Account extends CI_Controller
             'title' => 'Pengguna',
             'parent' => 'Pengguna',
             'child' => 'Tambah',
-            'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array(),
+            'users' => $this->db->get_where('tbl_users', ['nik' => $this->session->userdata('nik')])->row_array(),
             'jabatan' => $this->Jabatan_model->getAll()
         ];
 

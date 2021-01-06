@@ -24,7 +24,9 @@ class Admin extends CI_Controller
         //     }
         // }
         $data = [
-            'title' => 'Pengajuan ',
+            'title' => 'Dashboard ',
+            'parent' => 'Dashboard ',
+            'child' => 'Dashboard ',
             'users' => $this->db->get_where('tbl_users', ['nik' => $this->session->userdata('nik')])->row_array()
         ];
 
@@ -32,7 +34,7 @@ class Admin extends CI_Controller
         $this->load->view('templates/navbar');
         $this->load->view('templates/sidebar');
         // $this->load->view('templates/topbar');
-        $this->load->view('admin/pengajuan/index', $data);
+        $this->load->view('admin/dashboard/index', $data);
         $this->load->view('templates/footer');
     }
 

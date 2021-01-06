@@ -28,6 +28,7 @@ class Form extends CI_Controller
             'parent' => 'Pengajuan ',
             'child' => 'Form ',
             'users' => $this->db->get_where('tbl_users', ['nik' => $this->session->userdata('nik')])->row_array(),
+            'user' => $this->Users_model->getAll()
         ];
 
         $this->form_validation->set_rules('deskripsi_laporan_donasi', 'deskripsi', 'required');
@@ -86,6 +87,11 @@ class Form extends CI_Controller
 
 
         $data = [
+            'judul_pengajuan' => $this->input->post('judul_pengajuan'),
+            'dirumuskan_pengajuan' => $this->input->post('dirumuskan_pengajuan'),
+            'diperiksa_pengajuan' => $this->input->post('diperiksa_pengajuan'),
+            'ditetapkan_pengajuan' => $this->input->post('ditetapkan_pengajuan'),
+            'dikendalikan_pengajuan' => $this->input->post('dikendalikan_pengajuan'),
             'latar_belakang_pengajuan' => $this->input->post('latar_belakang_pengajuan'),
             'tujuan_pengajuan' => $this->input->post('tujuan_pengajuan'),
             'manfaat_pengajuan' => $this->input->post('manfaat_pengajuan'),

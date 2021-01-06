@@ -1,16 +1,15 @@
-<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1><?= $title; ?></h1>
+                    <h1><?= $title ?></h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Text Editors</li>
+                        <li class="breadcrumb-item"><a href="#"><?= $parent ?></a></li>
+                        <li class="breadcrumb-item active"><?= $child ?></li>
                     </ol>
                 </div>
             </div>
@@ -19,63 +18,67 @@
 
     <!-- Main content -->
     <section class="content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-outline card-info">
-                    <div class="card-header">
-                        <h3 class="card-title">
-                            Summernote
-                        </h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Data pengajuan</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Status</th>
+                                        <th>Judul Pengajuan</th>
+                                        <th>Proposal</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $no = 1;
+                                    foreach ($pengajuan as $data) : ?>
+                                        <tr>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $data->nama_lengkap ?></td>
+                                            <td><?= $data->nama_jabatan ?></td>
+                                            <td><?= $data->judul_pengajuan ?></td>
+                                            <td><a target="_blank" href="<?= base_url('assets/dokumen/pengajuan/' . $data->file_pengajuan); ?>">
+                                                    <?= $data->file_pengajuan ?>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a target="blank" href="<?= base_url('pengajuan/pengajuan/pengajuan_pdf/' . $data->id_pengajuan); ?>">
+                                                    Exports
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach ?>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>NIK</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <textarea id="summernote">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
-              </textarea>
-                    </div>
-                    <div class="card-footer">
-                        Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
-                    </div>
+                    <!-- /.card -->
                 </div>
+                <!-- /.col -->
             </div>
-            <!-- /.col-->
+            <!-- /.row -->
         </div>
-        <!-- ./row -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-outline card-info">
-                    <div class="card-header">
-                        <h3 class="card-title">
-                            CodeMirror
-                        </h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body p-0">
-                        <textarea id="codeMirrorDemo" class="p-3">
-<div class="info-box bg-gradient-info">
-  <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
-  <div class="info-box-content">
-    <span class="info-box-text">Bookmarks</span>
-    <span class="info-box-number">41,410</span>
-    <div class="progress">
-      <div class="progress-bar" style="width: 70%"></div>
-    </div>
-    <span class="progress-description">
-      70% Increase in 30 Days
-    </span>
-  </div>
-</div>
-              </textarea>
-                    </div>
-                    <div class="card-footer">
-                        Visit <a href="https://codemirror.net/">CodeMirror</a> documentation for more examples and information about the plugin.
-                    </div>
-                </div>
-            </div>
-            <!-- /.col-->
-        </div>
-        <!-- ./row -->
+        <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
